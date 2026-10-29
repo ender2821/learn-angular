@@ -1,5 +1,15 @@
 <div class="products-container">
   <!-- <p>Total Products: {{ products().length }}</p> -->
+  <mat-form-field appearance="outline"class="search-field">
+    <mat-label>Search Products</mat-label>
+    <input matInput placeholder="Search" [(ngModel)]="searchTerm"
+    // [ngModel]="searchTerm" (ngModelChange)="searchTerm" // long term for [(ngModel)]="searchTerm"
+    />
+  </mat-form-field>
+
+  <p class="search-preview">
+    Search term: <strong>{{ searchTerm() }}</strong>
+  </p>
 
   <div class="products-grid">
     @for (product of products(); track product.id) {

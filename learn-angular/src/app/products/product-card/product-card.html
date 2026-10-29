@@ -19,6 +19,6 @@
     <p> {{ product().description }}</p>
   </mat-card-content>
   <mat-card-actions>
-    <button matbutton>{{ addButtonLabel() }}</button>
+    <button matbutton (click)="onAddToCart()">{{ addButtonLabel() }}</button>
   </mat-card-actions>
 </mat-card>
